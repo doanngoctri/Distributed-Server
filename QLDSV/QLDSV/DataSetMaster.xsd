@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetMaster" targetNamespace="http://tempuri.org/DataSetMaster.xsd" xmlns:mstns="http://tempuri.org/DataSetMaster.xsd" xmlns="http://tempuri.org/DataSetMaster.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLDSV_MASTER_ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLDSV_MASTER_ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QLDSV.Properties.Settings.GlobalReference.Default.QLDSV_MASTER_ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_DSPMTableAdapter" GeneratorDataComponentClassName="V_DSPMTableAdapter" Name="V_DSPM" UserDataComponentName="V_DSPMTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLDSV_MASTER_ConnectionString (Settings)" DbObjectName="QLDSV.dbo.V_DSPM" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT description, subscriber_server FROM dbo.V_DSPM</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="description" DataSetColumn="description" />
+              <Mapping SourceColumn="subscriber_server" DataSetColumn="subscriber_server" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetMaster" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSetMaster" msprop:Generator_UserDSName="DataSetMaster">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_DSPM" msprop:Generator_TableClassName="V_DSPMDataTable" msprop:Generator_TableVarName="tableV_DSPM" msprop:Generator_TablePropName="V_DSPM" msprop:Generator_RowDeletingName="V_DSPMRowDeleting" msprop:Generator_RowChangingName="V_DSPMRowChanging" msprop:Generator_RowEvHandlerName="V_DSPMRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DSPMRowDeleted" msprop:Generator_UserTableName="V_DSPM" msprop:Generator_RowChangedName="V_DSPMRowChanged" msprop:Generator_RowEvArgName="V_DSPMRowChangeEvent" msprop:Generator_RowClassName="V_DSPMRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="subscriber_server" msprop:Generator_ColumnVarNameInTable="columnsubscriber_server" msprop:Generator_ColumnPropNameInRow="subscriber_server" msprop:Generator_ColumnPropNameInTable="subscriber_serverColumn" msprop:Generator_UserColumnName="subscriber_server" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
